@@ -2,7 +2,7 @@
 
 //	PIPE provides a unidirectional interprocess communication channel. A pipe has a read end and a write end.
 //	Data written to the write end of a pipe can be read from the read end of the pipe.
-//	Pipes are useful only for communication between related
+//	Pipes are useful only for communication between related process.
 //	We can read/write from either child or parent 
 
 #include<stdio.h>
