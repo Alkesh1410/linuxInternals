@@ -13,10 +13,9 @@ int main()
 {
 	char data[20];
 	int fileDescriptor;
-
-	if(mkfifo("fifpFile",0644))
-		perror("MKFIFO");
-
+	
+	//	If you have already executed tx code, file named "fifoFile" would have been generated.
+	//	we have written the data into that file. So now will work on the same file by opening it in read mode.
 	fileDescriptor = open("fifoFile",O_RDONLY);
 	if(fileDescriptor < 0)
 	{
@@ -25,7 +24,8 @@ int main()
 	}
 
 	while(1)
-	{	//	read() is a blocking call, so will be waiting untill it has something to read (or untill we write something from transmitter end)
+	{	
+	//	read() is a blocking call, so will be waiting untill it has something to read (or untill we write something from transmitter end)
 		read(fileDescriptor,data,sizeof(data));
 		printf("The data read is %s\n",data);
 	}
