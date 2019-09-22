@@ -30,7 +30,7 @@ int main()
 	while(1)
 	{
 		//	read the data from file1 (i.e. fifoFile1)
-		read(fileDescriptor1,data1,sizeof(data));
+		read(fileDescriptor1,data,sizeof(data));
 		printf("Data read from file1 is %s\n",data);
 
 		//	write the data in file2 (i.e. fifoFile2)
