@@ -11,7 +11,7 @@
 
 int main()
 {
-	char data1[20], data2[20];
+	char data[20];
 	int fileDescriptor1, fileDescriptor2;
 
 	fileDescriptor1 = open("fifoFile1",O_RDONLY);
@@ -30,13 +30,13 @@ int main()
 	while(1)
 	{
 		//	read the data from file1 (i.e. fifoFile1)
-		read(fileDescriptor1,data1,sizeof(data1));
-		printf("Data read from file1 is %s\n",data1);
+		read(fileDescriptor1,data1,sizeof(data));
+		printf("Data read from file1 is %s\n",data);
 
 		//	write the data in file2 (i.e. fifoFile2)
 		printf("Enter the data in file2\t:");
-		scanf("%s",data2);
-		write(fileDescriptor2,data2,strlen(data2)+1);
+		scanf("%s",data);
+		write(fileDescriptor2,data,strlen(data)+1);
 	}
 
 	return 0;
