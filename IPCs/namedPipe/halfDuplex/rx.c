@@ -1,5 +1,5 @@
 //	Prepared by Alkesh Shah
-//	This file demonstrates the receiver part of fullduplex communication using named pipe(FIFO)
+//	This file demonstrates the receiver part of halfduplex communication using named pipe(FIFO)
 //	NOTE: Both tx and rx needs to be executed in parallel (using seperate terminal if you are working on linux terminal).
 
 #include<stdio.h>
