@@ -1,5 +1,6 @@
 //	Prepared by Alkesh Shah
 //	This file demonstrates the receiver part of the simplex communication (i.e. one way) using named pipe(FIFO)
+//	NOTE: Both tx and rx needs to be executed in parallel (using seperate terminal if you are working on linux terminal).
 
 #include<stdio.h>
 #include<stdlib.h>
