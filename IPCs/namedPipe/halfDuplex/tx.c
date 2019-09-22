@@ -11,7 +11,7 @@
 
 int main()
 {
-	char data1[20], data2[20];
+	char data[20];
 	int fileDescriptor1, fileDescriptor2;
 
 	if(mkfifo("fifoFile1",0644))
@@ -36,12 +36,12 @@ int main()
 	{
 		//	write the data into file1 (i.e. fifoFile1)
 		printf("Enter the data in file1\t:");
-		scanf("%s",data1);
-		write(fileDescriptor1,data1,strlen(data1)+1);	
+		scanf("%s",data);
+		write(fileDescriptor1,data,strlen(data)+1);	
 
 		//	read the data from file2 (i.e. fifoFile2)
-		read(fileDescriptor2,data2,sizeof(data2));
-		printf("Data read from file2 is %s\n",data2);
+		read(fileDescriptor2,data,sizeof(data));
+		printf("Data read from file2 is %s\n",data);
 	}
 
 	return 0;
