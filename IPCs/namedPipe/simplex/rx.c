@@ -1,6 +1,8 @@
+//	Prepared by Alkesh Shah
+//	This file demonstrates the receiver part of the simplex communication (i.e. one way) using named pipe(FIFO)
+
 #include<stdio.h>
 #include<stdlib.h>
-#include<string.h>
 #include<unistd.h>
 #include<sys/types.h>
 #include<sys/stat.h>
@@ -22,7 +24,7 @@ int main()
 	}
 
 	while(1)
-	{
+	{	//	read() is a blocking call, so will be waiting untill it has something to read (or untill we write something from transmitter end)
 		read(fileDescriptor,data,sizeof(data));
 		printf("The data read is %s\n",data);
 	}
