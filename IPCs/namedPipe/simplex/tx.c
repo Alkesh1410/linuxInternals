@@ -1,8 +1,9 @@
 //	Prepared by Alkesh Shah
+//	This file demonstrates the transmitter part of simplex communication
+//	NOTE: Both tx and rx needs to be executed in parallel (using seperate terminal if you are working on linux terminal).
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<string.h>
 #include<unistd.h>
 #include<fcntl.h>
 #include<sys/types.h>
